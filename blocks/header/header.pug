@@ -1,0 +1,48 @@
+mixin header(data)
+  header   
+    +b.line-header#Header
+      .filter19
+      .filter18
+      .filter17
+      .filter16
+      .filter15
+      .filter14
+      .filter13
+      .filter12
+      .filter11
+      .filter10
+      .filter9
+      .filter8
+      .filter7
+      .filter6
+      .filter5
+      .filter4
+      .filter3
+      .filter2
+      .filter1
+
+
+      .wrap
+        +b.logo
+          img(src='img/logo.svg').logo
+
+        +b#header-nav-menu
+          +b.cd-nav-trigger
+            span
+            span
+            span  
+    +b.NAV.nav_item-right#menu
+      .wrapper
+        +b#header-nav-menu--close
+          +b.cd-nav-trigger--close
+            span
+            span
+
+        .cont
+          each item in data.menu
+            +e.A.link(href=item.href+".html")
+              +e.DIV.item= item.text
+        div
+  
+   
+

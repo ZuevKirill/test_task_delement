@@ -1,0 +1,309 @@
+header
+  height: 100px
+  @media (max-width: 800px)
+    height: 48px
+
+.nav_item-left
+  left: -251px
+  &.activ
+    pointer-events: all
+    opacity: 1
+    left: 0px
+  &__close
+    right: -50px
+
+.nav_item-right
+  right: -251px
+  &.activ
+    pointer-events: all
+    opacity: 1
+    right: 0px
+  &__close
+    left: -50px
+
+.nav_item-right
+  pointer-events: all
+  opacity: 1
+  position: fixed
+  z-index: 105
+  height: 100%
+  top: 0px
+  width: 250px
+  background: $secondary-color
+  transition: all .4s ease
+  filter: drop-shadow(0 0 40px rgba(0,0,0,0.3))
+  overflow-y: auto
+  -webkit-overflow-scrolling: touch
+  .cont
+    margin-top: 60px
+  .wrapper
+    display: flex
+    flex-direction: column
+    justify-content: space-between
+    height: 100%
+  &::-webkit-scrollbar 
+    -webkit-appearance: none
+    width: 5px
+    background: #ccc
+    border-radius: 5px
+  &::-webkit-scrollbar-track 
+    -webkit-box-shadow: inset 0 0 6px rgba(0,0,0,0.3)
+  &::-webkit-scrollbar-thumb 
+    background-color: darkgrey
+    border-radius: 5px
+  &__close
+    position: absolute
+    z-index: 9
+    width: 43px
+    top: 7px
+    cursor: pointer
+  &__item
+    position: relative
+    background: $secondary-color
+    border: 2px solid $secondary-color
+    z-index: 8
+    display: flex
+    align-items: center
+    height: 50px
+    padding-left: 16px
+    transition: all .4s ease
+    font-size: 12px
+    line-height: 16px
+    text-transform: uppercase
+    color: $font-color-light
+    cursor: pointer
+    &:hover 
+      background: $primary-color
+#Header .wrap
+  display: flex
+  justify-content: space-between
+  width: 100%;
+  margin: 13px 62px;
+  @media   ( max-width: 1200px )
+    margin: 16px 16px;
+.line-header
+  position: relative
+  max-width: 1920px
+  z-index: 3
+  height: 40px 
+  display: flex
+
+  justify-content: space-between
+  @media (max-width: 800px)
+    height: 48px
+    position: fixed !important
+    top: 0
+    width: 100%
+    z-index: 99
+    //background: rgba(255,255,255, 0.8)
+    //background: linear-gradient(0deg, rgba(255,255,255,0) 0%, rgba(255,255,255,0.8) 100%);
+    padding: 0px !important
+    
+    //box-shadow: 0px 4px 16px rgba(47, 55, 68, 0.15)
+    justify-content: center
+
+    
+
+  &__linklogo
+    display: flex
+    align-items: flex-end
+    margin-bottom: 16px
+    @media (max-width: 800px)
+      width: 110px
+      margin-bottom: 12px
+
+  .logo
+    
+    z-index: 100;
+.header-nav
+
+
+.header-nav-menu
+  display: none
+  cursor: pointer
+  &:hover
+    background: $font-color-light
+
+.sticky
+  position: fixed !important
+  top: 0px
+  width: 100%
+  z-index: 99
+  animation: .4s ease-in 0s move_eye
+  //background: rgba(255,255,255, 0.7)
+  padding: 0px !important
+  .filter19,
+  .filter18,
+  .filter17,
+  .filter16,
+  .filter15,
+  .filter14,
+  .filter13,
+  .filter12,
+  .filter11,
+  .filter10,
+  .filter9,
+  .filter8,
+  .filter7,
+  .filter6,
+  .filter5,
+  .filter4,
+  .filter3,
+  .filter2,
+  .filter1
+    width: 100%
+    position: absolute
+    height: 100px
+    bottom: -1px
+    -webkit-backdrop-filter: blur(19px)
+    backdrop-filter: blur(19px)
+
+  .filter18
+    -webkit-backdrop-filter: blur(18px)
+    backdrop-filter: blur(18px)
+    bottom: -4px
+  .filter17
+    bottom: -6px
+    -webkit-backdrop-filter: blur(17px)
+
+  .filter16
+    bottom: -8px
+    webkit-backdrop-filter: blur(16px)
+  .filter15
+    bottom: -10px
+    backdrop-filter: blur(15px)
+  .filter14
+    bottom: -12px
+    backdrop-filter: blur(14px)
+  .filter13
+    bottom: -14px
+    backdrop-filter: blur(13px)
+  .filter12
+    bottom: -16px
+    backdrop-filter: blur(12px)
+  .filter11
+    bottom: -18px
+    backdrop-filter: blur(11px)
+  .filter10
+    bottom: -20px
+    backdrop-filter: blur(10px)
+  .filter9
+    bottom: -22px
+    backdrop-filter: blur(9px)
+  .filter8
+    bottom: -24px
+    backdrop-filter: blur(8px)
+  .filter7
+    bottom: -26px
+    backdrop-filter: blur(7px)
+  .filter6
+    bottom: -28px
+    backdrop-filter: blur(6px)
+  .filter5
+    bottom: -30px
+    backdrop-filter: blur(5px)
+  .filter4
+    bottom: -32px
+    backdrop-filter: blur(4px)
+  .filter3
+    bottom: -34px
+    backdrop-filter: blur(3px)
+  .filter2
+    bottom: -36px
+    backdrop-filter: blur(2px)
+  .filter1
+    bottom: -38px
+    backdrop-filter: blur(0.5px)
+  @-moz-document url-prefix()
+    background: rgba(255,255,255, 1)
+  @media screen and (-webkit-min-device-pixel-ratio:0) and (min-resolution:.001dpcm) and (max-width: 800px)  
+    background: rgba(255,255,255, 1)
+
+@keyframes move_eye
+  from
+    transform: translateY(-100px)
+    //background: rgba(255,255,255, 0)
+    //border-bottom: 1px solid transparent
+    //-webkit-backdrop-filter: blur(0px)
+    //backdrop-filter: blur(0px)
+  to
+    transform: translateY(0px)
+    //background: rgba(255,255,255, 0.7)
+    //border-bottom: 1px solid $font-color-light
+    //-webkit-backdrop-filter: blur(16px)
+    //backdrop-filter: blur(16px)
+    
+
+
+#header-nav-menu 
+  z-index: 106
+  border-bottom: none !important
+  pointer-events: all
+  opacity: 1
+  padding-top: 18px
+
+
+
+
+
+.cd-nav-trigger
+  width: 20px
+  height: 20px
+  cursor: pointer
+  opacity: 1
+  position: static
+  right: 0
+
+ 
+
+.cd-nav-trigger span,
+.cd-nav-trigger--close span
+  transition: all .3s ease
+  cursor: pointer
+  position: absolute
+  width: 20px
+  height: 2px
+  background-color: #000
+
+.cd-nav-trigger span:nth-child(2)
+  margin-top: 6px
+
+.cd-nav-trigger span:nth-child(3)
+  margin-top: 12px
+
+.cd-nav-trigger--close
+  position: absolute
+  padding: 18px
+.cd-nav-trigger--close span
+  background-color: #fff
+
+.cd-nav-trigger--close span:nth-child(1)
+  margin-top: 6px
+  transform: rotate(-45deg)
+
+.cd-nav-trigger--close span:nth-child(2)
+  margin-top: 6px
+  transform: rotate(45deg)
+
+.bodyW
+  transition: all .3s ease
+  opacity: 0
+  pointer-events: none
+  position: fixed
+  width: 100%
+  height: 100%
+  z-index: 95
+  //background-color: rgba(0,0,0, .15)
+  //opacity: 0.8
+  //-webkit-backdrop-filter: blur(0px)
+  //backdrop-filter: blur(0px)
+  //@-moz-document url-prefix()
+    //background-color: rgba(0,0,0, .15)
+  
+
+.wbody__active
+  //display: block
+  opacity: 1
+  pointer-events: all
+  //-webkit-backdrop-filter: blur(10px)
+  //backdrop-filter: blur(10px)
