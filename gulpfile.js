@@ -151,9 +151,9 @@ gulp.task('fontsBuild', ['clean'], function() {
 //ftp
 gulp.task('send', function() {
     var conn = ftp.create({
-        host: '5.188.28.168',
-        user: 'refettorio.ru',
-        password: 'fjoOvv3ks',
+        host: '',
+        user: '',
+        password: '',
         parallel: 5
     });
     /* list all files you wish to ftp in the glob variable */
@@ -170,26 +170,27 @@ gulp.task('send', function() {
 });
 
 
-gulp.task('tinypng', function () {
+gulp.task('tinypng', function() {
     gulp.src([paths.devDir + 'img/**/*.png',
-    '!' + paths.devDir + 'img/favicon/*.png',
-    '!' + paths.devDir + 'img/portfolio/**/*.png',
-    '!' + paths.devDir + 'img/reviews/**/*.png',
-    '!' + paths.devDir + 'img/clients/**/*.png'])
+            '!' + paths.devDir + 'img/favicon/*.png',
+            '!' + paths.devDir + 'img/portfolio/**/*.png',
+            '!' + paths.devDir + 'img/reviews/**/*.png',
+            '!' + paths.devDir + 'img/clients/**/*.png'
+        ])
         .pipe(tinypng('vJZr0pBNHmp59CfRSPKsmVdlsn7hrNhj'))
         .pipe(gulp.dest(paths.outputDir + 'img/tiny/'));
 });
 
 gulp.task("exportwebp", function() {
     return gulp.src(paths.devDir + 'img/**/*.+(jpg|png)')
-      .pipe(imagemin([
-        webp({
-          quality: 50
-        })
-      ]))
-      .pipe(extReplace(".webp"))
-      .pipe(gulp.dest(paths.outputDir + 'img/webp/'));
-  });     
+        .pipe(imagemin([
+            webp({
+                quality: 50
+            })
+        ]))
+        .pipe(extReplace(".webp"))
+        .pipe(gulp.dest(paths.outputDir + 'img/webp/'));
+});
 
 //otherFiles
 gulp.task('siteMap', function() {
