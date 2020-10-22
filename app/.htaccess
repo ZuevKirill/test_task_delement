@@ -1,0 +1,9 @@
+Options +FollowSymLinks
+    RewriteEngine On
+
+    # РЕдирект 
+    RewriteCond %{THE_REQUEST} ^[A-Z]{3,9}\ /index\.html\ HTTP
+    RewriteRule ^index\.html$ http://apriori-marketing.ru/ [R=301,L]
+
+    RewriteCond %{HTTP_HOST} ^www\.(.*)$ [NC]
+    RewriteRule ^www\.(.*)$ https://%1/$1 [R=301,L]

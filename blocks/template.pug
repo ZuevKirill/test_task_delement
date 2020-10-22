@@ -1,0 +1,53 @@
+include _assets/bemto/bemto
+-  set_bemto_settings({ modifier: '--', })
+include _assets/img/img
+
+//-include sldercooler/sldercooler
+include head/head
+include button/button
+include maps/maps
+include popup/popup
+include popup_sm/popup_sm
+
+include form/form
+
+doctype html
+html(lang="ru")
+	
+	block head(item)
+		head
+			block title
+				title
+			+head({
+	      "author": "Apriori Marketing", 
+	      "description": dataDescription,
+		  "keywords": dataKeywords
+	    })
+
+		+b.BODY.pages#body
+			.bodyW#wbody
+			block popupform
+				//-+popup
+				+popup
+
+			+e.wrap
+				block content
+					div content
+
+			block vendors
+				script( src='js/vendors.js')
+				script(src='https://cdnjs.cloudflare.com/ajax/libs/cleave.js/1.6.0/cleave.min.js')
+
+		block scripts
+			script(src="js/main.js?v1.05")
+
+		script.
+			$('#tel').toArray().forEach(function(field){
+				new Cleave(field, {
+					numericOnly: true,
+					blocks: [0, 3, 3, 2, 2],
+					delimiters: ["(", ") ", "-", "-"],
+					phoneRegionCode: 'RU'
+
+				})
+			});

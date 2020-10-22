@@ -1,0 +1,70 @@
+.btn
+  cursor: pointer
+  transition: all .3s ease
+  backface-visibility: visible
+  outline: none
+
+  &__ico
+  &__text
+    //text-transform: uppercase
+    font-style: normal
+    font-weight: normal
+    font-size: 24px;
+    line-height: 16px
+    color: $font-color-light
+    transition: all .3s ease
+    -webkit-backface-visibility: hidden
+    text-align: center;
+    width: 100%;
+    @media (max-width: 800px)
+      font-size: 14px
+      
+  &--green
+    background: $secondary-color
+    padding: 24px 24px
+    box-shadow: 0px 4px 16px rgba(3, 122, 207, 0.3)
+    border-radius: 16px
+    line-height: 16px
+    //margin: 0 auto
+    width: fit-content
+    width: -moz-fit-content
+    @media (max-width: 800px)
+      padding: 18px 20px
+      line-height: 16px
+
+    &:hover
+      box-shadow: 0px 8px 32px rgba(3, 122, 207, 0.3)
+      transform: scale3d(1.01, 1.01, 1.01)
+    & .btn__text
+      font-size: 16px
+      font-weight: bold
+      display: block
+      @media (max-width: 800px)
+        font-size: 14px
+        @media (max-width: 375px)
+          font-size: 0.8rem
+  &--red
+    background: $secondary-color-red
+    padding: 26px 26px
+    box-shadow: 0px 4px 16px rgba(3, 122, 207, 0.3)
+    border-radius: 16px
+    line-height: 16px
+    //margin: 0 auto
+    width: fit-content
+    width: -moz-fit-content
+    @media (max-width: 800px)
+      padding: 18px 20px
+      line-height: 16px
+
+    &:hover
+      box-shadow: 0px 8px 32px rgba(3, 122, 207, 0.3)
+      transform: scale3d(1.01, 1.01, 1.01)
+    & .btn__text
+      font-size: 24px;
+
+      
+      display: block
+      @media (max-width: 800px)
+        font-size: 14px
+        @media (max-width: 375px)
+          font-size: 0.8rem

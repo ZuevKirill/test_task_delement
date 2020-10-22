@@ -1,0 +1,11 @@
+mixin img(src, alt)
+   picture&attributes(attributes)
+    source(srcset='img/' + src + '@mob.png 1x, img/' + src + '.png 2x' media='(max-width: 560px)')
+    source(type='image/webp' gulpsrcset='img/webp/' + src + '@mob.webp 1x, img/webp/' + src + '.webp 2x' media='(max-width: 560px)')
+    source(type='image/webp' srcset='img/webp/' + src + '.webp 1x, img/webp/' + src + '@2x.webp 2x')
+    img(src='img/' + src + '.png' srcset='img' + src + '.png 1x, img/' + src + '@2x.png 2x' alt=alt)&attributes(attributes)
+
+mixin imgc(src, alt)
+    picture&attributes(attributes)
+    source(type='image/webp' srcset='img/webp/' + src + '.webp')
+    img(src='img/' + src + '.jpg' alt=alt)&attributes(attributes)

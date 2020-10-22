@@ -1,0 +1,49 @@
+.map
+  +col(6)
+  height: 276px
+  position: relative
+  &:nth-child(2)
+    @media (max-width: 1000px)
+      margin-top: 130px
+    
+    
+  @media (max-width: 800px)
+    +col(12)
+  &__address
+    width: calc(100% - 40px*2)
+    top: -100px
+    position: absolute
+    z-index: 1
+    background: $primary-color
+    box-shadow: 0px 8px 32px rgba(46, 55, 68, 0.1)
+    border-radius: 4px 4px 0px 0px
+    color: $footer-color
+    padding: 24px 40px
+    @media (max-width: 800px)
+        padding: 18px 20px
+        width: calc(100% - 19px*2)
+        top: -82px
+    p 
+      font-family: IBM Plex Serif
+      font-style: italic
+      font-weight: 500
+      font-size: 24px
+      line-height: 32px
+      @media (max-width: 800px)
+        font-size: 18px
+        line-height: 24px
+    address
+      font-family: Open Sans
+      font-style: normal
+      font-weight: normal
+      font-size: 16px
+      line-height: 24px
+      letter-spacing: -0.03em
+      @media (max-width: 800px)
+        font-size: 14px
+        line-height: 24px
+.ymaps-2-1-76-map
+  width: 100% !important
+      
+
+

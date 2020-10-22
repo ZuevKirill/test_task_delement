@@ -1,0 +1,24 @@
+extends template
+
+block content
+        +b.SECTION.chief
+            .container
+                +e.logo
+                    img(src="img/logo.svg", alt="")
+            .container
+                .wrap
+                    
+
+block title
+    title title
+    - var currentUrl = 'no'
+    - var dataDescription = ''
+    - var dataKeywords = ''
+
+block prepend vendors
+
+
+
+block prepend scripts
+    script.
+        console.log('init');

@@ -1,0 +1,35 @@
+mixin popup_sm()
+    +b.wrap_popup
+      +b.popup_body_sm
+        +e.SVG.close(width="48" height="48" viewBox="0 0 48 48")
+          path(d="M12 12L36 36M36 12L12 36" stroke="#2E3744" stroke-width="2" stroke-linecap="round" stroke-linejoin="round")
+
+          
+        +b.popup_sm
+          .container.col-8
+            +e.h1.title Регистрация
+            
+          .container.col-8  
+            +b.FORM.form-subscribe(action="/")
+              fieldset
+            
+              .group(style="width:100%")
+                  input.txt(id="username" on="1" type="text" inputmode="name" autocomplete="name" name="user_name" onchange="this.className=(this.value=='')?'':'visited';" required)
+                  label.form(for="username") Имя
+
+
+              .group 
+                input.tel(id="tel" on="2" type="tel"  name="userphone" pattern="[() -\d]{15}" autocomplete="tel"  onchange="this.className=(this.value=='')?'':'visited';" required)
+                label.form(for="tel") Телефон
+                .country-phone +7
+
+              .group 
+                input.email(id="email" on="3" type="email"  name="useremail" pattern="^[a-z0-9._%+-]+@[a-z0-9.-]+\.[a-z]{2,4}$" autocomplete="email"  onchange="this.className=(this.value=='')?'':'visited';" required)
+                label.form(for="email") E-mail
+
+              p.price(style="text-align: center;") Стоимость участия: 
+                span 690 ₽
+
+              +button-green('Регистрация')(class="submitb" style="margin: 0 auto; width:100%;" type="submit" on="7" des)
+              p.textprivacy Отправля данные, вы подтверждаете, что ознакомлены с <a href="privacy.html", target="_blank", rel="noopener noreferrer"> политикой конфиденциальности</a>
+

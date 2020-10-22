@@ -1,0 +1,45 @@
+mixin form(btntext)  
+
+  +b.FORM.form(action="/")
+
+    fieldset
+      
+      .group(style="width:100%")
+          input.txt(id="username" tabindex="1" type="text" inputmode="name" autocomplete="name" name="user_name" onchange="this.className=(this.value=='')?'':'visited';" required)
+          label.form(for="username") Имя
+
+      .flex
+        .group 
+          //- pattern="[0-9]{10}" onkeyup="this.value = this.value.replace(/[^ 0-9]/gim,'');"  pattern="[a-z0-9._%+-]+@[a-z0-9.-]+\.[a-z]{2,}$" minlength="10" maxlength="14"
+          input.tel(id="tel" tabindex="2" type="tel"  name="userphone" pattern="[() -\d]{15}" autocomplete="tel"  onchange="this.className=(this.value=='')?'':'visited';" required)
+          label.form(for="tel") Телефон
+          .country-phone +7
+
+        .group 
+          input.email(id="email" tabindex="3" type="email"  name="useremail" pattern="^[a-z0-9._%+-]+@[a-z0-9.-]+\.[a-z]{2,4}$" autocomplete="email"  onchange="this.className=(this.value=='')?'':'visited';" required)
+          label.form(for="email") E-mail
+
+      .flex        
+        .group  
+          input.txt(id="act" tabindex="4" type="text" name="text_working" autocomplete="off" onchange="this.className=(this.value=='')?'':'visited';" required)
+          label.form(for="act") Сфера деятельности
+
+        
+        .group
+          input.number(id="number" tabindex="5" type="text" inputmode="decimal" name="user_number" minlength="1" pattern="[0-9]*" onkeyup="this.value = this.value.replace(/[^ 0-9]/gim,'');" onchange="this.className=(this.value=='')?'':'visited';" required)
+          label.form(for="number") Количество сотрудников
+
+
+      .group(style="width: 100%")
+        textarea.txt(id="text" tabindex="6" rows="3" name="text_area" onchange="this.className=(this.value=='')?'':'visited';" required)
+        label.form(for="text") Задача. О чем хотите поговорить?
+
+
+      +button-orange(btntext)(class="submitb" type="submit" tabindex="7" des)
+
+      //-+button-orange(btntext, "send.html")(class="submitb")
+
+
+
+
+

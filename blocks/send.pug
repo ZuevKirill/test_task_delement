@@ -1,0 +1,14 @@
+extends template
+
+block content
+        +b.SECTION(style="hight:100vh;background-color:FAFAFA;")
+            .container
+                +e.logo
+                    img(src="img/logo.svg", alt="")
+            .container(style="text-align:center")
+                .wrap
+                    h1(style="text-align:center") Спасибо
+                    p(style="text-align:center") Ваша заявка принята. На указанную почту должно прийти подтверждающее письмо.
+                    br
+                    br
+                    +button-red("Вернуться", "https://refettorio.ru/webinar/trendy-v-dizaine-obschepitov/")(style="margin: 0 auto")
