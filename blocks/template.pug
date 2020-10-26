@@ -7,6 +7,7 @@ include head/head
 include button/button
 include footer/footer
 include header/header
+include popup_sm/popup_sm
 
 
 doctype html
@@ -23,6 +24,7 @@ html(lang="ru")
 	    })
 
 		+b.BODY.pages#body
+			+popup_sm()
 			.bodyW#wbody
 
 			block header

@@ -1,0 +1,29 @@
+mixin popup_sm()
+    +b.wrap_popup
+      +b.popup_body_sm
+        +e.SVG.close(width="48" height="48" viewBox="0 0 48 48")
+          path(d="M12 12L36 36M36 12L12 36" stroke="#2E3744" stroke-width="2" stroke-linecap="round" stroke-linejoin="round")
+
+          
+        +b.popup_sm
+          .container.col-8
+            +e.h1.title SEND US MESSAGE
+            
+          .container.col-8  
+            +b.FORM.form-subscribe(action="/")
+              fieldset
+            
+              .group(style="width:100%")
+                  input.txt(id="username" on="1" type="text" inputmode="name" autocomplete="name" name="user_name" onchange="this.className=(this.value=='')?'':'visited';" required)
+                  label.form(for="username") Full Name
+
+              .group 
+                input.email(id="email" on="3" type="email"  name="useremail" pattern="^[a-z0-9._%+-]+@[a-z0-9.-]+\.[a-z]{2,4}$" autocomplete="email"  onchange="this.className=(this.value=='')?'':'visited';" required)
+                label.form(for="email") E-mail
+
+              .group(style="width: 100%")
+                textarea.txt(id="text" tabindex="6" rows="3" name="text_area" onchange="this.className=(this.value=='')?'':'visited';" required)
+                label.form(for="text") Message
+
+              +button-main('Регистрация')(class="submitb" style="width:100%;" type="submit" on="7" des)
+
