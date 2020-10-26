@@ -702,9 +702,7 @@ header {
     font-family: Gilroy;
     font-size: 20px;
     line-height: 30px;
-    /* identical to box height, or 150% */
     letter-spacing: 0.04em;
-    /* Blue_01 */
     color: #1F3F68;
     text-align: center;
     margin-top: 60px;
