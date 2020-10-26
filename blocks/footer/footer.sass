@@ -6,5 +6,141 @@ footer
   background: #ccc
   padding-top: 40px
   background: $secondary-color
+  margin-top: -200px
+  z-index: 2
+  position: relative
+  padding-top: 96px
+  padding-bottom: 64px
+  @media   ( max-width: 1200px )
+    padding-right: 32px
+
+    
+.footer
+  .wrap
+    +col(7)
+    @media   ( max-width: 600px )
+      width: 100%
+      
+  .col4
+    +col(5)
+    @media   ( max-width: 600px )
+      width: 100%
+  .col3
+    +col(3)
+    @media   ( max-width: 600px )
+      width: 50%
+      margin-top: 62px
+  .copir 
+    opacity: 0.4;
+  h3 
+    width: 80%
+    font-family: Gilroy;
+    font-size: 36px;
+    line-height: 46px;
+    /* or 128% */
+
+    letter-spacing: 0.05em;
+
+    /* white */
+
+    color: #FFFFFF;
+    @media   ( max-width: 800px )
+      text-align: center;
+      width: 100%
+  p 
+    margin-top: 24px
+  span 
+    
+    padding-right: 16px
+    font-weight: bold
+  h4 
+    font-family: Gilroy;
+    font-size: 20px;
+    line-height: 30px;
+    /* identical to box height, or 150% */
+
+    letter-spacing: 0.05em;
+
+    /* white */
+
+    color: #FFFFFF;
+  &__link 
+    font-family: Gilroy;
+    font-size: 16px;
+    line-height: 26px;
+    /* identical to box height, or 162% */
+
+    letter-spacing: 0.05em;
+
+    /* white */
+
+    color: #FFFFFF;
+    display: block
+    margin-bottom: 16px
+    &:hover
+      padding-left: 4px
+  &__subtitle 
+    opacity: 0.6;
+  .container
+    z-index: 5;
+    position: relative;
+  .wrapper
+    //width: 860px
+    position: relative
+  .flex
+    display: flex
+    align-items: center
+    margin-bottom: 96px
+    justify-content: space-between
+    @media   ( max-width: 800px )
+      flex-direction: column
+  .btn
+    @media   ( max-width: 800px )
+      margin-top: 32px  
+      
+  .bottom
+    padding-top: 96px
+    justify-content: space-between;
+    align-items: start;
+    @media   ( max-width: 600px ) 
+      width: 100%
+      //+col(7)
+      flex-wrap: wrap
+      //flex-direction: column-reverse;
+      
+  hr 
+    
+    opacity: 0.4;
+    background: #fff
+    height: 1px
+    position: absolute
+    right: 0
+    border: none
+
+  &::after
+    content: ""
+    background: $secondary-color
+    width: 30%;
+    height: 100%;
+    position: absolute;
+    right: 96px;
+    
+    border-radius: 0px 200px 0px 0px
+    top: 0
+    z-index: 2;
+    @media   ( max-width: 1200px )
+      right: 32px;
+      border-radius: 0px 100px 0px 0px
+      
+  &::before
+    content: ""
+    background: $primary-color
+    width: 30%;
+    height: 100%;
+    position: absolute;
+    right: 0
+    top: 0
+    z-index: 1;
+
   @media (max-width:740px)
     height: auto

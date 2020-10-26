@@ -8,6 +8,11 @@ It's easy Gulp+Pug+SASS boilerplate
 * Launch `gulp` to run watchers, server and compilers
 * Launch `gulp building` to minify files for production
 
+
+##attentively
+Сonver format webP only in prodaction(build)
+no work dev chrome
+
 ##Directory Layout
 
 	project_gulp_bem  # Project root
