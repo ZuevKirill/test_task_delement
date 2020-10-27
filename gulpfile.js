@@ -218,7 +218,7 @@ gulp.task('htaccess', function() {
 gulp.task('default', ['browser-sync', 'watch', 'pug', 'sass', 'scripts', 'vendors', 'vendorsCSS']);
 
 //production
-gulp.task('building', ['clean', 'build', 'buildstyle', 'buildjs', 'imgBuild', 'fontsBuild']);
+gulp.task('building', ['clean', 'build', 'buildstyle', 'buildjs', 'imgBuild', 'fontsBuild', 'exportwebp']);
 
 //production
 gulp.task('builhtml', ['build', 'buildstyle', 'buildjs']);
