@@ -72,7 +72,7 @@ jQuery(document).ready(function($) {
 
                 //$('.submitb').text(result);
                 $('.form').css("display", "none");
-                $('.popup_sm__h1').text("You mes send!");
+                $('.popup_sm__h1').text("You messege, send!");
                 $('.submitb').css("display", "none");
 
             }
